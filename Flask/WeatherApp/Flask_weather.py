@@ -10,7 +10,7 @@ def index():
     
     if request.method == 'POST':
         city = request.form.get('city')
-        api_key = "Key is attched at th end of the code paste that removed for security reason"  # Paste your key here 
+        api_key = "Key is attched at th end of the code paste that, removed here for security reason"  # Paste your key here 
         url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&appid={api_key}"
         
         response = requests.get(url)
@@ -34,3 +34,4 @@ if __name__ == '__main__':
     app.run(debug=True)
 
     #API Key 46da03b57f7ffde73379125d950d2d7e
+
