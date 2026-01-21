@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Todo</title>
+    <style>
+        /* Modern Reset & Background */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Main Container */
+        .container {
+            background: white;
+            width: 100%;
+            max-width: 400px;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        /* Input Area */
+        form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 2rem;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #eee;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #a1c4fd;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #764ba2;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #667eea;
+        }
+
+        /* Task List */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border: 1px solid #f0f0f0;
+            transition: transform 0.2s;
+        }
+
+        li:hover {
+            transform: scale(1.02);
+        }
+
+        .task-text {
+            flex: 1;
+            color: #444;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: #bbb;
+        }
+
+        /* Action Links */
+        .actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .actions a {
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .check-btn {
+            color: #28a745;
+            background: #e8f5e9;
+        }
+
+        .delete-btn {
+            color: #dc3545;
+            background: #ffebee;
+        }
+
+        .check-btn:hover { background: #c8e6c9; }
+        .delete-btn:hover { background: #ffcdd2; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>My Tasks</h1>
+
+        <form action="/add" method="POST">
+            <input type="text" name="task" placeholder="What's next?" required>
+            <button type="submit">Add</button>
+        </form>
+
+        <ul>
+            {% for todo in todos %}
+            <li>
+                <span class="task-text {{ 'completed' if todo.done else '' }}">
+                    {{ todo.task }}
+                </span>
+                <div class="actions">
+                    <a href="{{ url_for('check', todo_id=todo.id) }}" class="check-btn">✓</a>
+                    <a href="{{ url_for('delete', todo_id=todo.id) }}" class="delete-btn">✕</a>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</body>
+</html>

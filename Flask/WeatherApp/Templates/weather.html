@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast | Modern Weather</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --glass: rgba(255, 255, 255, 0.2);
+            --glass-border: rgba(255, 255, 255, 0.3);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            color: white;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            padding: 40px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            text-align: center;
+        }
+
+        h2 { font-weight: 600; letter-spacing: 1px; margin-bottom: 25px; }
+
+        .search-box {
+            display: flex;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 5px 15px;
+            border: 1px solid var(--glass-border);
+            margin-bottom: 30px;
+        }
+
+        input {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 10px;
+            flex: 1;
+            font-size: 16px;
+        }
+
+        input::placeholder { color: rgba(255, 255, 255, 0.6); }
+
+        button {
+            background: white;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #2c5364;
+            transition: 0.3s;
+        }
+
+        button:hover { transform: scale(1.05); background: #e0e0e0; }
+
+        .weather-info { animation: fadeIn 1s ease-in; }
+
+        .city-name { font-size: 1.8rem; margin: 0; }
+        
+        .temp-display {
+            font-size: 5rem;
+            font-weight: 300;
+            margin: 10px 0;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .description {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .weather-icon {
+            width: 120px;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 25px;
+            border-top: 1px solid var(--glass-border);
+            padding-top: 20px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 20px;
+        }
+
+        .stat-label { font-size: 0.7rem; opacity: 0.7; }
+        .stat-value { font-size: 1rem; font-weight: 600; }
+
+        .error { background: rgba(255, 0, 0, 0.2); padding: 10px; border-radius: 10px; font-size: 0.9rem; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>SkyCast</h2>
+        
+        <form method="POST" class="search-box">
+            <input type="text" name="city" placeholder="Search City..." autocomplete="off" required>
+            <button type="submit">Search</button>
+        </form>
+
+        {% if error %}
+            <div class="error">{{ error }}</div>
+        {% endif %}
+
+        {% if weather %}
+        <div class="weather-info">
+            <h3 class="city-name">{{ weather.city }}</h3>
+            <img src="http://openweathermap.org/img/wn/{{ weather.icon }}@4x.png" class="weather-icon" alt="weather icon">
+            <div class="temp-display">{{ weather.temp }}°</div>
+            <div class="description">{{ weather.desc }}</div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-label">HUMIDITY</div>
+                    <div class="stat-value">{{ weather.humidity }}%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">WIND SPEED</div>
+                    <div class="stat-value">{{ weather.wind }} m/s</div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>

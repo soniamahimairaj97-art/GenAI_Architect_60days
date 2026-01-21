@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aesthetic Poll</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ question }}</h1>
+        <form action="/vote" method="POST" class="vote-form">
+            {% for option, votes in options.items() %}
+            <label class="option-card">
+                <input type="radio" name="option" value="{{ option }}" required>
+                <span>{{ option }}</span>
+            </label>
+            {% endfor %}
+            <button type="submit" class="button">Vote Now</button>
+        </form>
+        <div class="footer-links">
+            <a href="{{ url_for('results') }}">View Results</a>
+        </div>
+    </div>
+</body>
+</html>
