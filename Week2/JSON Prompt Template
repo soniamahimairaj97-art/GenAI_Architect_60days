@@ -1,0 +1,61 @@
+JSON Prompting Template 
+
+{
+  "intent": {
+    "purpose": "Why this video exists and what it should communicate",
+    "core_message": "Primary idea the viewer should take away"
+  },
+
+  "context": {
+    "location": "Physical or environmental setting where the scene happens",
+    "environment_details": "Landscape, architecture, weather, cultural elements"
+  },
+
+  "subject": {
+    "hero": "Main subject or character of the video",
+    "appearance": "Clothing, physical traits, tools or props",
+    "action": "What the subject is doing"
+  },
+
+  "camera": {
+    "shot_type": "Wide / Medium / Close-up / Aerial",
+    "movement": "Static / Pan / Tilt / Dolly / Handheld / Tracking",
+    "angle": "Eye-level / Low-angle / High-angle",
+    "lens_style": "Cinematic / Documentary / Macro / Ultra-wide"
+  },
+
+  "time": {
+    "time_of_day": "Morning / Afternoon / Evening / Night",
+    "season": "Season or agricultural cycle if relevant",
+    "temporal_flow": "Continuous / Time-lapse / Slow motion / Real-time"
+  },
+
+  "light": {
+    "source": "Natural / Artificial / Mixed",
+    "quality": "Soft / Hard / Diffused / Directional",
+    "color_tone": "Warm / Cool / Neutral",
+    "visual_rules": "Lighting constraints or stylistic rules"
+  },
+
+  "emotion": {
+    "primary_feeling": "Main emotion to evoke in the viewer",
+    "secondary_feelings": "Supporting emotional tones",
+    "atmosphere": "Overall emotional environment"
+  },
+
+  "pace": {
+    "speed": "Slow / Medium / Fast",
+    "rhythm": "Smooth / Rhythmic / Dynamic / Calm",
+    "editing_style": "Long takes / Quick cuts / Natural transitions"
+  },
+
+  "constraints": {
+    "avoid_elements": [
+      "Unwanted objects",
+      "Incorrect cultural details",
+      "Modern distractions"
+    ],
+    "style_restrictions": "Things that must not appear stylistically",
+    "technical_limits": "Resolution, duration, or motion limits"
+  }
+}
