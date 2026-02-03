@@ -1,0 +1,175 @@
+# 🍱 RTCFR PROMPT
+
+### *(Cloud Kitchen – Take-Away Orders Experience)*
+
+## **R — ROLE**
+You are an expert **Cloud Kitchen Product Designer + Operations Strategist + UX Writer**, specializing in **high-volume take-away food systems** with a focus on **speed, transparency, and user trust**.
+
+
+## **T — TASK**
+Design a **user-centric take-away ordering flow** for a cloud kitchen that:
+
+* Clearly communicates **real cooking time**
+* Reduces **waiting anxiety**
+* Provides **live order status**
+* Builds **trust through transparency**
+* Improves **repeat orders and satisfaction**
+
+## **C — CONTEXT**
+The system serves **urban users ordering take-away food** from cloud kitchens where:
+
+* There is **no dine-in**
+* Peak hours cause **delays**
+* Users are often **hungry, rushed, or commuting**
+* Customers dislike **uncertain waiting time**
+* Missed expectations lead to **order cancellations or bad reviews**
+
+
+## **F — FORMAT**
+
+Generate the solution as a **structured user experience flow**, including:
+
+1. **Menu Screen**
+2. **Order Confirmation Screen**
+3. **Cooking & Preparation Tracker**
+4. **Pickup Notification System**
+5. **Post-Order Report / Summary**
+6. **Optional Add-ons & Smart Prompts**
+
+Each section must include:
+
+* UI text examples
+* Time indicators
+* Status messages
+* User reassurance cues
+
+---
+
+## **R — REQUIREMENTS**
+
+### 🔥 **1. Cooking Time Transparency**
+
+Show **accurate, item-based cooking time**, not vague estimates.
+
+* Example:
+
+  * *Butter Chicken — 18 mins*
+  * *Tandoori Roti — 6 mins*
+  * *Total Prep Time: 24 mins*
+
+Include:
+
+* Buffer explanation (e.g., “Peak hour buffer: +5 mins”)
+* Reason for delay if applicable
+
+---
+
+### ⏳ **2. Live Order Status (Pain Point: Anxiety While Waiting)**
+
+Break the order into **clear stages**:
+
+* 🟢 Order Confirmed (0–2 mins)
+* 🔪 Ingredients Being Prepared
+* 🔥 Cooking in Progress
+* 🧂 Final Packing
+* 📦 Ready for Pickup
+
+Each stage shows:
+
+* Time spent
+* Time remaining
+* Friendly reassurance text
+
+Example:
+
+> “Your food is being cooked fresh — 10 mins to go 🍳”
+
+---
+
+### 📍 **3. Pickup Timing & Accuracy**
+
+Prevent early or late arrival frustration.
+
+* Auto-notify user:
+
+  * “Arrive in **7 minutes** for the freshest pickup”
+* Show:
+
+  * Kitchen location
+  * Pickup counter name
+  * Order code (large & bold)
+
+---
+
+### 📊 **4. Post-Order User Report (Trust Builder)**
+
+After pickup, show a **simple order report**:
+
+* Ordered at: 7:12 PM
+* Cooking started: 7:15 PM
+* Food ready: 7:38 PM
+* Total kitchen time: **23 mins**
+
+Add:
+
+* “Prepared fresh after order — not pre-cooked”
+* Kitchen hygiene or quality badge (if applicable)
+
+---
+
+### 😖 **5. Address Core User Pain Points**
+
+Explicitly solve:
+
+* ❌ “Why is my food late?”
+* ❌ “Is it already cooked or fresh?”
+* ❌ “Should I leave now or wait?”
+* ❌ “Am I wasting time standing outside?”
+
+With:
+
+* Honest updates
+* Calm, human tone
+* No fake progress bars
+
+---
+
+### 💡 **6. Smart UX Add-Ons**
+
+Optional but powerful features:
+
+* “Order again in 1 tap”
+* “Best time to order: 6:30–7:00 PM”
+* “Fastest dishes right now” section
+* Auto-discount if delay exceeds promise time
+
+---
+
+### 🚫 **7. Constraints**
+
+Avoid:
+
+* Generic time ranges (“20–40 mins”)
+* Fake real-time animations
+* Over-notifications
+* Technical kitchen jargon
+
+Tone must be:
+
+* Clear
+* Calm
+* Honest
+* Human
+
+---
+
+## 🎯 **GOAL**
+
+Make users feel:
+
+* In control
+* Informed
+* Respected
+* Confident their time is not being wasted
+
+
