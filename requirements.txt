@@ -1,0 +1,13 @@
+streamlit==1.35.0
+openai==1.35.0
+langchain==0.2.6
+langchain-core==0.2.10
+langchain-community==0.2.6
+langchain-openai==0.1.8
+faiss-cpu==1.8.0
+PyMuPDF==1.24.5
+neo4j==5.21.0
+python-dotenv==1.0.1
+numpy==1.26.4
+tiktoken==0.7.0
+httpx==0.27.0
