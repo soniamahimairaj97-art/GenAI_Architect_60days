@@ -1,0 +1,169 @@
+Farm2Home - Mobile App UI (Customer App)
+1. Splash Screen
+
+Logo: Farm2Home 
+
+
+Tagline: Fresh from Farm to Home 
+
+
+Background: Farm and milk theme 
+
+2. Login / Signup
+
+Mobile number input 
+
+
+OTP verification 
+
+
+Feature: Simple & fast (no password) 
+
+3. Home Screen (Main Dashboard)
+
+Today's delivery status 
+
+
+Active subscription card: 
+
+Milk type 
+
+Quantity 
+
+Next delivery time 
+
+
+Quick actions: 
+
+Add milk 
+
+Pause delivery 
+
+$ Add wallet balance 
+
+4. Select Milk / Products
+
+Product cards: 
+
+Cow Milk 
+
+Buffalo Milk 
+
+Organic / A2 Milk 
+
+Price per litre 
+
+
+Quantity selector: (+/-) 
+
+5. Subscription Setup
+
+Delivery frequency: 
+
+Daily 
+
+Alternate days 
+
+Custom days 
+
+
+Preferred delivery time: Early morning 
+
+
+Start date 
+
+
+Confirm subscription 
+
+6. Wallet & Payments
+
+Wallet balance 
+
+
+Add money (UPI) 
+
+
+Auto-deduction option 
+
+
+Transaction history 
+
+7. Order History
+
+Calendar-based list 
+
+
+Delivered / Skipped days 
+
+
+Invoice download 
+
+8. Pause / Modify Delivery
+
+Pause for date range 
+
+
+Change quantity 
+
+
+Resume anytime 
+
+9. Profile & Address
+
+User name 
+
+
+Delivery address 
+
+
+Preferred instructions: 
+
+"Leave at gate" 
+
+"Ring bell" 
+
+
+Support & feedback 
+
+Delivery Partner App & Admin Panel
+Delivery Partner App (Main Screens)
+
+Login 
+
+
+Today's route list 
+
+
+Customer details 
+
+
+Mark as Delivered / Failed 
+
+Admin Panel - Dashboard
+
+Total customers 
+
+
+Daily milk demand 
+
+
+Active subscriptions 
+
+
+Payment summary 
+
+
+Delivery tracking 
+
+Design Style Recommendation
+
+Primary color: Green 
+
+
+Secondary colors: White & Cream 
+
+
+Font: Poppins / Roboto 
+
+
+Icons: Rounded, friendly
